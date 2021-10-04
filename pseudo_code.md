@@ -62,13 +62,13 @@ ordersCtrl.js
 => create
 => submit
 
-//DB called orders//
+//DB "Orders"//
 1.order schema:
 1) customer name
 2) customer phone no.
 3) customer e-mail (?)
 4) pick up location (Downtown OR NW)
-5) Product (given: name, price, flavour) X 3
+5) Product (given: name, price, flavour) X 3 products category (cookies, cake, canele)
 5-1) choose quantity per flavour
 6) Subtotal
 7) Tip
