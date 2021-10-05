@@ -1,10 +1,7 @@
-
 var Order = require("../models/order.js");
 
 module.exports = {
     index,
-    newOrder,
-    create,
     test,
 };
 
@@ -24,13 +21,6 @@ function index(req,res){
 }
 
 
-
-
-// can't use new. new is reserved.
-function newOrder(req,res){
-    res.render('orders/orders-form.ejs')
-}
-
 async function create(req,res){
     let userInput = req.body;
     //using mongoose fn create
@@ -44,19 +34,3 @@ async function create(req,res){
     console.log('flight',newinput)
 res.redirect('/orders')
 }
-
-//how to add async and await here? I think my syntax is wrong and gave me error.
-// function show(req,res){
-//     let incomingId = req.params.id 
-//      let specificFlight = Flight.findById(incomingId, function(err, flight){
-//     });
-//     console.log('id is', req.params.id)
-//     console.log(specificFlight)
-//     res.render('flights/flights-detail.ejs', {specificFlight:specificFlight})
-// }
-
-// function show(req, res) {
-//     Flight.findById(req.params.id, function(err, flight) {
-//       res.render('flights/flights-detail.ejs', { flight });
-//     });
-//   }

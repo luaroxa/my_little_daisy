@@ -1,0 +1,4 @@
+<%- include('../partials/header') %>
+<h1> full list of oders that came in for Amin to see</h1>
+
+<%- include('../partials/footer') %>a

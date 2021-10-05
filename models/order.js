@@ -13,14 +13,9 @@ const orderSchema = new Schema({
     type: String,
     enum: ['Downtown SW', 'Dalhousie NW']
   },
-  subtotal: {
-    type: Number,
-  },
-  tip: {
-    type: Number,
-  },
-  tax: {
-    type: Number,
+  product: {
+    type: String,
+    //or should I reference the product 
   },
   total: {
     type: Number,
