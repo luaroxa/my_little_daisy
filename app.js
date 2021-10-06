@@ -36,7 +36,7 @@ app.use(methodOverride("_method"));
 app.use('/home', indexRouter);
 app.use('/users', usersRouter);
 app.use("/orders", require("./routes/orders.js"));
-
+app.use("/products", require("./routes/products.js"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
