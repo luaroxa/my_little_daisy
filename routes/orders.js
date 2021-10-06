@@ -32,16 +32,17 @@ router.get('/logout', function(req, res){
 /* GET home page. */
 // don't call it /index. 
 router.get('/', ordersCtrl.index);
-
-
-
 router.get('/test', ordersCtrl.test);
 
+
+//to view all the orders for ADMIN
 router.get('/view', ordersCtrl.viewAllOrder);
 
+//to see order form for a customer
+router.get('/customer', ordersCtrl.viewForm);
+// to submit the form 
+router.post('/customer', ordersCtrl.create);
 
-// post method to create data.
-router.post('/order/thankyou', ordersCtrl.create);
 
 
 

@@ -6,6 +6,7 @@ module.exports = {
     create,
     test,
     viewAllOrder,
+    viewForm,
 };
 
 
@@ -42,6 +43,12 @@ function index(req, res) {
 //     res.render('orders/orders-form.ejs')
 // }
 
+async function viewForm(req, res) {
+    await Order.find({}, function (err, orders) {
+        res.render("orders/order-customer.ejs", { orders});
+    });
+  }
+
 async function create(req,res){
     let userInput = req.body;
     //using mongoose fn create
@@ -51,11 +58,11 @@ async function create(req,res){
         pickupLocation : req.body.pickupLocation,
         product : req.body.product,
         quantity : req.body.quantity,
-        quantity : req.body.quantity,
+        price : req.body.price,
     })
     console.log('userinput', userInput)
     console.log('customerOrder', customerOrder)
-res.redirect('/orders')
+    res.render("orders/orders-ty.ejs")
 }
 
 // displaying all of customer orders
