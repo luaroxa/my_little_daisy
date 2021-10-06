@@ -20,7 +20,7 @@ const Schema = mongoose.Schema;
   quantity: {
     type: Number,
   },
-  total: {
+  quantity: {
     type: Number,
   },
 

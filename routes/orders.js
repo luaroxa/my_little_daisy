@@ -37,6 +37,8 @@ router.get('/', ordersCtrl.index);
 
 router.get('/test', ordersCtrl.test);
 
+router.get('/view', ordersCtrl.viewAllOrder);
+
 
 // post method to create data.
 router.post('/order/thankyou', ordersCtrl.create);

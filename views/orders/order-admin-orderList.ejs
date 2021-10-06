@@ -2,9 +2,11 @@
 <h1> full list of oders that came in for Amin to see</h1>
 
 <h1> Current Orders </h1>
+<% if (orders.length) { %>
 <table id="orderList">
     <thead>
         <tr>
+            <th>no.</th>
           <th>Customer Name</th>
           <th>Customer Phone</th>
           <th>PickupLocation</th>
@@ -14,15 +16,18 @@
         </tr>
       </thead>
         <tbody>
-          <% order.forEach(function(order) { %>
+          <% orders.forEach(function(order) { %>
           <tr>
-            <td><%= product.product_name %></td>
-            <td><%= product.product_type %></td>
-            <td><%= product.product_flavor %></td>
-            <td><%= product.price %></td>
+            <td><%= orders.length %></td>
+            <td><%= order.product_name %></td>
+            <td><%= order.product_type %></td>
+            <td><%= order.product_flavor %></td>
+            <td><%= order.price %></td>
           </tr>
           <% }); %>
-  </tbody>
-</table>
-
+        </tbody>
+    </table>
+    <% } else { %>
+    <h5>No Customer ordered Yet</h5>
+    <% } %>
 <%- include('../partials/footer') %>a

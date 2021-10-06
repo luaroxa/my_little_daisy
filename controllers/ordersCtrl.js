@@ -5,6 +5,7 @@ module.exports = {
     index,
     create,
     test,
+    viewAllOrder,
 };
 
 
@@ -15,7 +16,8 @@ async function test(req,res){
 res.send ('thanks')
 }
 
-
+// where I will display log-in
+//dpend on the admin, you get directed to 2 diff page.
 function index(req, res) {
     Order.find({}, function(err,order){
         res.render('orders/order-index.ejs')
@@ -43,16 +45,25 @@ function index(req, res) {
 async function create(req,res){
     let userInput = req.body;
     //using mongoose fn create
-    let newinput = await Flight.create({
-        airline: userInput.airline,
-        airport : userInput.airport,
-        flightNo : userInput.flightNo,
-        departs : userInput.departs,
+    let customerOrder = await Order.create({
+        customerName: req.body.customerName,
+        customerPhone : req.body.customerPhone,
+        pickupLocation : req.body.pickupLocation,
+        product : req.body.product,
+        quantity : req.body.quantity,
+        quantity : req.body.quantity,
     })
     console.log('userinput', userInput)
-    console.log('flight',newinput)
+    console.log('customerOrder', customerOrder)
 res.redirect('/orders')
 }
+
+// displaying all of customer orders
+async function viewAllOrder(req, res) {
+    await Order.find({}, function (err, orders) {
+        res.render("orders/order-admin-orderList.ejs", { orders});
+    });
+  }
 
 //how to add async and await here? I think my syntax is wrong and gave me error.
 // function show(req,res){
