@@ -14,6 +14,7 @@ productSchema = new Schema({
     price: {
       type: Number,
     },
+    
   
   }, {
     timestamps: true

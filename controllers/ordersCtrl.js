@@ -3,10 +3,11 @@ var Order = require("../models/order.js");
 
 module.exports = {
     index,
-    newOrder,
     create,
     test,
 };
+
+
 
 
 async function test(req,res){
@@ -14,22 +15,30 @@ async function test(req,res){
 res.send ('thanks')
 }
 
-function index(req,res){
-    //brining all the data in DB, using MG fn
-    // is it flight or flightS? or up to me?  
-    //seems like it's whateverI call. 
+
+function index(req, res) {
     Order.find({}, function(err,order){
-        res.render('orders/orders-form.ejs', {order:order})
+        res.render('orders/order-index.ejs')
     });
-}
+  };
+  
+
+// function indexB(req,res){
+//     //brining all the data in DB, using MG fn
+//     // is it flight or flightS? or up to me?  
+//     //seems like it's whateverI call. 
+//     Order.find({}, function(err,order){
+//         res.render('orders/orders-form.ejs', {order:order})
+//     });
+// }
 
 
 
 
 // can't use new. new is reserved.
-function newOrder(req,res){
-    res.render('orders/orders-form.ejs')
-}
+// function newOrder(req,res){
+//     res.render('orders/orders-form.ejs')
+// }
 
 async function create(req,res){
     let userInput = req.body;

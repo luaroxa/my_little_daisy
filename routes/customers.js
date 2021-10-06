@@ -1,10 +1,7 @@
 var express = require("express");
 var router = express.Router();
-const ordersCtrl = require("../controllers/ordersCtrl.js");
+const customersCtrl = require("../controllers/customersCtrl.js");
 const passport = require('passport')
-
-// below is how I called it
-// app.use("/orders", require("./routes/orders.js"));
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
@@ -31,15 +28,12 @@ router.get('/logout', function(req, res){
 
 /* GET home page. */
 // don't call it /index. 
-router.get('/', ordersCtrl.index);
+router.get('/', customersCtrl.index);
 
 
 
-router.get('/test', ordersCtrl.test);
+router.get('/test', customersCtrl.test);
 
-
-// post method to create data.
-router.post('/order/thankyou', ordersCtrl.create);
 
 
 

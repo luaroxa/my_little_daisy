@@ -1,0 +1,84 @@
+<%- include('../partials/header') %>
+
+<h1> Current Product List </h1>
+<table id="productList">
+    <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Product Type</th>
+          <th>Product Flavour</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+        <tbody>
+          <% product.forEach(function(product) { %>
+          <tr>
+            <td><%= product.product_name %></td>
+            <td><%= product.product_type %></td>
+            <td><%= product.product_flavor %></td>
+            <td><%= product.price %></td>
+          </tr>
+          <% }); %>
+  </tbody>
+</table>
+
+<h1> New product? Add below </h1>
+
+<form
+      method="POST"
+      action="/products"
+      class="form-horizontal"
+      id="new_product"
+    >
+
+  <div class="form-group text-center">
+    <label for="productName" class="col-sm-2 control-label"> Product Name </label>
+    <div class="col-sm-5">
+      <input
+        id="productName"
+        type="string"
+        class="form-control"
+        placeholder="product-flavour"
+      />
+    </div>
+  </div>
+
+<div class="form-group text-center">
+  <label for="productType" class="col-sm-2 control-label"> Product Type </label>
+  <div class="col-sm-5">
+<select id="productType" name="productType">
+    <option value="Cheese Cake">Cheese Cake</option>
+    <option value="Ugly Cookie">Ugly Cookie</option>
+    <option value="Canele">Canele</option>
+  </select>
+  </div>
+</div>
+
+<div class="form-group text-center">
+    <label for="productFlavor" class="col-sm-2 control-label"> Product Flavor</label>
+    <div class="col-sm-5">
+      <input
+        id="productFlavor"
+        type="string"
+        class="form-control"
+      />
+    </div>
+  </div>
+
+  <div class="form-group text-center">
+    <label for="price" class="col-sm-2 control-label"> Price </label>
+    <div class="col-sm-5">
+      <input
+        id="price"
+        type="number"
+        class="form-control"
+      />
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<!-- WOuld like to add a delete button beside each item -->
+
+<%- include('../partials/footer') %>
