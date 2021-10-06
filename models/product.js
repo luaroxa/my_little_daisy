@@ -5,10 +5,13 @@ const Schema = mongoose.Schema;
 
 
 productSchema = new Schema({
-    product_name: {
+    productName: {
       type: String,
     },
-    product_flavor: {
+    productType: {
+        type: String,
+      },
+    productFlavor: {
       type: String,
     },
     price: {

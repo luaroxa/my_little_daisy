@@ -3,19 +3,22 @@ const Schema = mongoose.Schema;
 
 
  orderSchema = new Schema({
-  customer_name: {
+  customerName: {
     type: String,
   },
-  customer_phone: {
+  customerPhone: {
     type: String,
   },
-  pickup_location: {
+  pickupLocation: {
     type: String,
     enum: ['Downtown SW', 'Dalhousie NW']
   },
   product: {
     type: String,
     //or should I reference the product 
+  },
+  quantity: {
+    type: Number,
   },
   total: {
     type: Number,

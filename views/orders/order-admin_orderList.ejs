@@ -1,4 +1,28 @@
 <%- include('../partials/header') %>
 <h1> full list of oders that came in for Amin to see</h1>
-A
+
+<h1> Current Orders </h1>
+<table id="orderList">
+    <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Customer Phone</th>
+          <th>PickupLocation</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Total $</th>
+        </tr>
+      </thead>
+        <tbody>
+          <% order.forEach(function(order) { %>
+          <tr>
+            <td><%= product.product_name %></td>
+            <td><%= product.product_type %></td>
+            <td><%= product.product_flavor %></td>
+            <td><%= product.price %></td>
+          </tr>
+          <% }); %>
+  </tbody>
+</table>
+
 <%- include('../partials/footer') %>a

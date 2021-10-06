@@ -36,7 +36,11 @@ router.get('/logout', function(req, res){
 
 
 router.get('/testP', productsCtrl.testP);
+router.get('/display', productsCtrl.display);
+
 module.exports = router;
+
+
 
 
 

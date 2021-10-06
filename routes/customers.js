@@ -26,14 +26,6 @@ router.get('/logout', function(req, res){
 });
 
 
-/* GET home page. */
-// don't call it /index. 
-router.get('/', customersCtrl.index);
-
-
-
-router.get('/test', customersCtrl.test);
-
 
 
 

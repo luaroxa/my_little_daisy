@@ -2,6 +2,7 @@ var Product = require("../models/product.js");
 
 module.exports = {
     testP,
+    display,
 };
 
 
@@ -11,6 +12,12 @@ res.send ('coolio')
 }
 
 
+
+  async function display(req, res) {
+    await Product.find({}, function (err, product) {
+        res.render("menues/menu.ejs", { product});
+    });
+  }
 
 
 // async function create(req,res){
