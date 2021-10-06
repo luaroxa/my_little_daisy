@@ -10,6 +10,7 @@ productSchema = new Schema({
     },
     productType: {
         type: String,
+        // enum: ["Cheese Cake","Ugly Cookie","Canele"]
       },
     productFlavor: {
       type: String,

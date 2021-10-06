@@ -35,9 +35,10 @@ router.get('/logout', function(req, res){
 // });
 
 
-router.get('/testP', productsCtrl.testP);
-router.get('/display', productsCtrl.display);
-
+// router.get('/testP', productsCtrl.testP);
+router.get('/menu', productsCtrl.menu);
+router.get('/products-current', productsCtrl.display);
+router.post('/products-current', productsCtrl.create);
 module.exports = router;
 
 
