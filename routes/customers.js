@@ -4,11 +4,6 @@ const customersCtrl = require("../controllers/customersCtrl.js");
 const passport = require("passport");
 
 router.get("/orders", customersCtrl.index);
-
-
-//so far this is set up so I can use it in orders url.
-// to get a user log in BEFORE directing them 
-
 //marc's code
 // router.get("/google", customersCtrl.index);
 
