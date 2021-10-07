@@ -74,9 +74,8 @@ why can't I margin container Mune??*/
    /* background-color: rgb(242, 194, 194); */
 }
 
-.card mb-3 {
-
- 
+.customerForm {
+  margin: 50px 0px auto;
 }
 /* 
 body {

@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
-<h2>Welcome back Admin! <br> Here's your current product list.</h2>
+<h2>Welcome back Admin! <br> Here's a list of all of the orders.</h2>
 <br><br>
 
 <h1>Current Orders</h1>
 <% if (orders.length) { %>
-<table id="orderList">
+<table class="table table-striped" id="orderList">
   <thead>
     <tr>
       <th>no.</th>
