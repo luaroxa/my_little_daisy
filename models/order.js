@@ -3,20 +3,15 @@ const Schema = mongoose.Schema;
 
 orderSchema = new Schema(
   {
-    customerName: {
-      type: String,
-    },
-    customerPhone: {
-      type: String,
-    },
+    customer: [{ type: Schema.Types.ObjectId, ref: "Customers" }],
     pickupLocation: {
       type: String,
       enum: ["Downtown SW", "Dalhousie NW"],
     },
-    product: {
-      type: String,
-      //or should I reference the product
-    },
+    product: [{ type: Schema.Types.ObjectId, ref: "Products" }],
+    // product: {
+    //   type: String,
+    // },
     quantity: {
       type: Number,
     },

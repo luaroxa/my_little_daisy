@@ -2,6 +2,7 @@ const Customer = require("../models/customer.js");
 
 module.exports = {
   index,
+  login,
   //   addFact,
   //   delFact
 };
@@ -15,9 +16,17 @@ function index(req, res, next) {
   });
 }
 
-// const login = async(req, res) => {
-//   const user = await User.findOne({username: req.body.username})
-//   if (!user) res.render('login', {error: 'Invalid Credentials'})
+
+function login(req, res, next) {
+  if (!customer) {
+    res.redirect('/orders', {error: 'Invalid Credentials'})
+  }
+  if (customer && customer.id === '615f1f1a17bc87ae562c659a') {
+    res.redirect('/orders/view', {error: 'Invalid Credentials'})
+  }
+}
+
+
 
 //   const pw = await bcrypt.compareSync(req.body.password, user.password)
 //   if (!pw) res.render('login', {error: 'Invalid Credentials'})

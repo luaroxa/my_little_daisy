@@ -5,7 +5,6 @@ const customerSchema = new Schema(
   {
     name: String,
     email: String,
-    myOrder: [{ type: Schema.Types.ObjectId, ref: "Product" }],
     googleId: String,
   },
   {
