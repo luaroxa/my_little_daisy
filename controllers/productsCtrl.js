@@ -36,12 +36,18 @@ async function create(req, res) {
 
 //failed 50%
 async function menu(req, res) {
-  const canele  = await Product.find({ productType: 'Canele' });
-  console.log('canele', canele)
-    res.render("menues/menu.ejs", { canele });
+  const caneles  = await Product.find({ productType: 'Canele' });
+  const cookies  = await Product.find({ productType: 'Ugly Cookie' });
+  // console.log('canele', canele)
+  console.log('cookies', cookies)
+    res.render("menues/menu.ejs", { caneles, cookies });
   };
 
 
+
+
+
+// [For PRODUCT LIST]
 // showing full list of products
 async function display(req, res) {
   await Product.find({}, function (err, product) {

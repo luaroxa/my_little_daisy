@@ -76,6 +76,18 @@
   </div>
 </div>
 
-<%= canele%>
+<%= caneles %>
+<%= cookies %>
+
+<% caneles.forEach(function(product) { %>
+  <td><%= product.productName %></td>
+  <td><%= product.productFlavor %></td>
+  <% }) %>
+
+<% cookies.forEach(function(product) { %>
+    <td><%= product.productName %></td>
+    <td><%= product.productType %></td>
+    <td><%= product.productFlavor %></td>
+    <% }) %>
 
 <%- include('../partials/footer') %>
