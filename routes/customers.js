@@ -1,26 +1,9 @@
 var express = require("express");
 var router = express.Router();
 const customersCtrl = require("../controllers/customersCtrl.js");
-const passport = require('passport')
+const passport = require("passport");
 
-
-
-//brit's code
-// router.get('/', function(req, res, next) {
-//   res.render('customers.ejs', {user: req.user});
-// });
-
-
-router.get('/google', customersCtrl.index);
-// Google OAuth login route
-// concent screen pops up
-//take usre to google
-
-//JAne
-// router.get('/auth/google', passport.authenticate(
-//   'google',
-//   { scope: ['profile'] }
-// ));
+router.get("/google", customersCtrl.index);
 
 //marc's code
 router.get(
@@ -33,22 +16,21 @@ router.get(
 
 // Google OAuth callback route
 //I need success routes to split into admin and customer
-router.get('/oauth2callback', passport.authenticate(
-  'google',
-  {
+router.get(
+  "/oauth2callback",
+  passport.authenticate("google", {
     //no matte what, if logged in,m yo're going to /orders/admin
     //give if statment in orders routes.+ ctrl
-    successRedirect : '/customers',
-    failureRedirect : '/customers'
-  }
-));
+    successRedirect: "/customers",
+    failureRedirect: "/customers",
+  })
+);
 
 // OAuth logout route
 //setting req.user to be null and re-directing it.
-router.get('/logout', function(req, res){
+router.get("/logout", function (req, res) {
   req.logout();
-  res.redirect('/home');
+  res.redirect("/home");
 });
-
 
 module.exports = router;

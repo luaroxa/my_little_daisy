@@ -1,33 +1,34 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
- orderSchema = new Schema({
-  customerName: {
-    type: String,
+orderSchema = new Schema(
+  {
+    customerName: {
+      type: String,
+    },
+    customerPhone: {
+      type: String,
+    },
+    pickupLocation: {
+      type: String,
+      enum: ["Downtown SW", "Dalhousie NW"],
+    },
+    product: {
+      type: String,
+      //or should I reference the product
+    },
+    quantity: {
+      type: Number,
+    },
+    price: {
+      type: Number,
+    },
   },
-  customerPhone: {
-    type: String,
-  },
-  pickupLocation: {
-    type: String,
-    enum: ['Downtown SW', 'Dalhousie NW']
-  },
-  product: {
-    type: String,
-    //or should I reference the product 
-  },
-  quantity: {
-    type: Number,
-  },
-  price: {
-    type: Number,
-  },
-
-}, {
-  timestamps: true
-});
+  {
+    timestamps: true,
+  }
+);
 
 //I need product/flavour/price
 
-module.exports = mongoose.model('Order', orderSchema);
+module.exports = mongoose.model("Order", orderSchema);

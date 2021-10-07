@@ -1,17 +1,17 @@
-<%- include('../partials/header') %>
-order form for custeomr
+<%- include('../partials/header') %> order form for custeomr
 
-<h1> Here to put an order?  </h1>
+<h1>Here to put an order?</h1>
 
 <form
-      method="POST"
-      action="/orders/customer"
-      class="form-horizontal"
-      id="new_order"
-    >
-
+  method="POST"
+  action="/orders/customer"
+  class="form-horizontal"
+  id="new_order"
+>
   <div class="form-group text-center">
-    <label for="customerName" class="col-sm-2 control-label"> Customer Name </label>
+    <label for="customerName" class="col-sm-2 control-label">
+      Customer Name
+    </label>
     <div class="col-sm-5">
       <input
         id="customerName"
@@ -22,43 +22,33 @@ order form for custeomr
     </div>
   </div>
 
-<div class="form-group text-center">
-  <label for="pickupLocation" class="col-sm-2 control-label"> Pickup Location</label>
-  <div class="col-sm-5">
-<select id="pickupLocation" name="pickupLocation">
-    <option value="Downtown SW">Downtown SW</option>
-    <option value="Dalhousie NW">Dalhousie NW</option>
-  </select>
+  <div class="form-group text-center">
+    <label for="pickupLocation" class="col-sm-2 control-label">
+      Pickup Location</label
+    >
+    <div class="col-sm-5">
+      <select id="pickupLocation" name="pickupLocation">
+        <option value="Downtown SW">Downtown SW</option>
+        <option value="Dalhousie NW">Dalhousie NW</option>
+      </select>
+    </div>
   </div>
-</div>
 
-<div class="form-group text-center">
+  <div class="form-group text-center">
     <label for="quantity" class="col-sm-2 control-label"> Quantity</label>
     <div class="col-sm-5">
-      <input
-        id="quantity"
-        name="quantity"
-        type="string"
-        class="form-control"
-      />
+      <input id="quantity" name="quantity" type="string" class="form-control" />
     </div>
   </div>
 
   <div class="form-group text-center">
     <label for="price" class="col-sm-2 control-label"> Price </label>
     <div class="col-sm-5">
-      <input
-        id="price"
-        name="price"
-        type="number"
-        class="form-control"
-      />
+      <input id="price" name="price" type="number" class="form-control" />
     </div>
   </div>
 
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
-
-
 
 <%- include('../partials/footer') %>

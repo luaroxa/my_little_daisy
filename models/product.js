@@ -1,31 +1,29 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
-productSchema = new Schema({
+productSchema = new Schema(
+  {
     productName: {
       type: String,
     },
     productType: {
-        type: String,
-        // enum: ["Cheese Cake","Ugly Cookie","Canele"]
-      },
+      type: String,
+      enum: ["Cheese Cake","Ugly Cookie","Canele"]
+    },
     productFlavor: {
       type: String,
     },
     price: {
       type: Number,
     },
-    
-  
-  }, {
-    timestamps: true
-  });
-  
-
+  },
+  {
+    timestamps: true,
+  }
+);
 
 // const productSchema = new Schema({
-//     name: { type: 
+//     name: { type:
 //         String},
 //     name_flavor: {
 //       type: String,

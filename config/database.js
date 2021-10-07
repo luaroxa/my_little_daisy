@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost/my_litle_daisy');
+mongoose.connect("mongodb://localhost/my_litle_daisy");
 
 // shortcut to mongoose.connection objec
 const db = mongoose.connection;
 
-db.on('connected', function () {
+db.on("connected", function () {
   console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
 });

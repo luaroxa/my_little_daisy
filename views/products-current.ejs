@@ -1,38 +1,39 @@
 <%- include('./partials/header') %>
 
-<h1> Current Product List </h1>
+<h1>Current Product List</h1>
 <table id="productList">
-    <thead>
-        <tr>
-          <th>Product Name</th>
-          <th>Product Type</th>
-          <th>Product Flavour</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-        <tbody>
-          <% product.forEach(function(product) { %>
-          <tr>
-            <td><%= product.productName %></td>
-            <td><%= product.productType %></td>
-            <td><%= product.productFlavor %></td>
-            <td><%= product.price %></td>
-          </tr>
-          <% }); %>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Product Type</th>
+      <th>Product Flavour</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% product.forEach(function(product) { %>
+    <tr>
+      <td><%= product.productName %></td>
+      <td><%= product.productType %></td>
+      <td><%= product.productFlavor %></td>
+      <td><%= product.price %></td>
+    </tr>
+    <% }); %>
   </tbody>
 </table>
 
-<h1> New product? Add below </h1>
+<h1>New product? Add below</h1>
 
 <form
-      method="POST"
-      action="/products/products-current"
-      class="form-horizontal"
-      id="new_product"
-    >
-
+  method="POST"
+  action="/products/products-current"
+  class="form-horizontal"
+  id="new_product"
+>
   <div class="form-group text-center">
-    <label for="productName" class="col-sm-2 control-label"> Product Name </label>
+    <label for="productName" class="col-sm-2 control-label">
+      Product Name
+    </label>
     <div class="col-sm-5">
       <input
         id="productName"
@@ -44,19 +45,23 @@
     </div>
   </div>
 
-<div class="form-group text-center">
-  <label for="productType" class="col-sm-2 control-label"> Product Type </label>
-  <div class="col-sm-5">
-<select id="productType" name="productType">
-    <option value="Cheese Cake">Cheese Cake</option>
-    <option value="Ugly Cookie">Ugly Cookie</option>
-    <option value="Canele">Canele</option>
-  </select>
+  <div class="form-group text-center">
+    <label for="productType" class="col-sm-2 control-label">
+      Product Type
+    </label>
+    <div class="col-sm-5">
+      <select id="productType" name="productType">
+        <option value="Cheese Cake">Cheese Cake</option>
+        <option value="Ugly Cookie">Ugly Cookie</option>
+        <option value="Canele">Canele</option>
+      </select>
+    </div>
   </div>
-</div>
 
-<div class="form-group text-center">
-    <label for="productFlavor" class="col-sm-2 control-label"> Product Flavor</label>
+  <div class="form-group text-center">
+    <label for="productFlavor" class="col-sm-2 control-label">
+      Product Flavor</label
+    >
     <div class="col-sm-5">
       <input
         id="productFlavor"
@@ -70,18 +75,11 @@
   <div class="form-group text-center">
     <label for="price" class="col-sm-2 control-label"> Price </label>
     <div class="col-sm-5">
-      <input
-        id="price"
-        name="price"
-        type="number"
-        class="form-control"
-      />
+      <input id="price" name="price" type="number" class="form-control" />
     </div>
   </div>
 
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
-
-
 
 <%- include('./partials/footer') %>
