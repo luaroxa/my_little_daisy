@@ -25,11 +25,29 @@ async function create(req, res) {
   res.redirect("/products/products-current");
 }
 
+// async function menu(req, res) {
+//   await Product.find({}, function (err, product) {
+//     res.render("menues/menu.ejs", { product });
+//   });
+// }
+
+// const query  = Kitten.where({ color: 'white' });
+// query.findOne(function (err, kitten) {
+//   if (err) return handleError(err);
+//   if (kitten) {
+//     // doc may be null if no document matched
+//   }
+// });
+
+
 async function menu(req, res) {
-  await Product.find({}, function (err, product) {
-    res.render("menues/menu.ejs", { product });
-  });
-}
+  const canele  = Product.find({ productType: 'Canele' });
+  console.log('canele', canele)
+    res.render("menues/menu.ejs", { canele });
+  };
+
+
+
 
 async function display(req, res) {
   await Product.find({}, function (err, product) {

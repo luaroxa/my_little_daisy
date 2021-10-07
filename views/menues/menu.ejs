@@ -1,37 +1,81 @@
 <%- include('../partials/header') %>
 <h1>Menu</h1>
-<div class="containerMenu">
-  <div class="containerLeft" id="canele">
-    <div class="left">img</div>
-    <div class="right">
-      <div class="productType">Canale</div>
-      <div class="price">$4 each</div>
-      <div class="flavour">flavour1, 2, 3,</div>
+<div class="containerMenu col-xs-offset-4 ">
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="/images/img13.jpg"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Canele</h5>
+          <div class="right">
+            <div class="productType">Canale</div>
+            <div class="price">$4 each</div>
+            <div class="flavour">flavour1, 2, 3,</div>
+          </div>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="containerRight" id="cheesecake">
-    <div class="left">
-      <div class="productType">Basque Cheese Cake</div>
-      <div class="price">$12 each</div>
-      <div class="flavour">flavour1, 2, 3,</div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Basque Cheese Cake</h5>
+          <div class="right">
+            <div class="productType">Basque Cheese Cake</div>
+            <div class="price">$12 each</div>
+            <div class="flavour">flavour1, 2, 3,</div>
+          </div>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="/images/img7.jpg" class="img-fluid rounded-start" alt="..." />
+      </div>
     </div>
-
-    <div class="right">img</div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="/images/img10.jpg"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Ugly Cookie</h5>
+          <div class="right">
+            <div class="productType">Ugly Cookie</div>
+            <div class="price">$4 each</div>
+            <div class="flavour">flavour1, 2, 3,</div>
+          </div>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="containerLeft" id="cookies">
-    <div class="left">img</div>
-    <div class="right">
-      <div class="productType">Ugly Cookies</div>
-      <div class="price">$4 each</div>
-      <div class="flavour">flavour1, 2, 3,</div>
-    </div>
-  </div>
-
-  <div>
-    <a href="/orders" type="button"> Go order !</a>
+  <div class="orderBtn">
+    <a href="/orders" class="btn btn-primary">o r d e r</a>
   </div>
 </div>
+
+<%= canele%>
 
 <%- include('../partials/footer') %>
