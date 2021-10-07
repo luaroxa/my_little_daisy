@@ -45,7 +45,7 @@ function index(req, res) {
 
 async function viewForm(req, res) {
     await Order.find({}, function (err, orders) {
-        res.render("orders/order-customer.ejs", { orders});
+        res.render("orders/order-customer-form.ejs", { orders});
     });
   }
 

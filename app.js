@@ -11,8 +11,6 @@ require('./config/passport.js');
 var methodOverride = require("method-override");
 
 var indexRouter = require('./routes/index');
-//um... did I mess up???
-var usersRouter = require('./routes/customers');
 
 var app = express();
 
@@ -35,10 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 
 app.use('/home', indexRouter);
-app.use('/users', usersRouter);
+
 app.use("/orders", require("./routes/orders.js"));
 app.use("/products", require("./routes/products.js"));
-app.use("/customers", require("./routes/customers.js"));
+app.use("/", require("./routes/customers.js"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -19,10 +19,12 @@
           <% orders.forEach(function(order) { %>
           <tr>
             <td><%= orders.length %></td>
-            <td><%= order.product_name %></td>
-            <td><%= order.product_type %></td>
-            <td><%= order.product_flavor %></td>
-            <td><%= order.price %></td>
+            <td><%= order.customerName %></td>
+            <td><%= order.customerPhone %></td>
+            <td><%= order.pickupLocation %></td>
+            <td><%= order.product %></td>
+            <td><%= order.quantity %></td>
+            <td><%= order.total %></td>
           </tr>
           <% }); %>
         </tbody>
