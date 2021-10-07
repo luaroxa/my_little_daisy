@@ -1,7 +1,7 @@
 var Order = require("../models/order.js");
 
 module.exports = {
-  index,
+  // index,
   create,
   test,
   viewAllOrder,
@@ -15,11 +15,12 @@ async function test(req, res) {
 
 // where I will display log-in
 //dpend on the admin, you get directed to 2 diff page.
-function index(req, res) {
-  Order.find({}, function (err, order) {
-    res.render("orders/order-index.ejs");
-  });
-}
+// I don't think I no longer need this
+// function index(req, res) {
+//   Order.find({}, function (err, order) {
+//     res.render("orders/order-index.ejs");
+//   });
+// }
 
 async function viewForm(req, res) {
   await Order.find({}, function (err, orders) {
