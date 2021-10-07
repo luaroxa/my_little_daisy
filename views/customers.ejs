@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
-    <title>Document</title>
-  </head>
-  <body>
+<%- include('./partials/header') %>
     <div class="nav-wrapper">
-      <a href="" class="brand-logo left">example</a>
+
+      <br>
+      <h3>Ready to order a ray of sweet sunshine? <br> Please kindly login first ! </h3>
+      <br>
+      <div class="imgMain">
+        <img src="/images/img14.jpg" id="k" alt="..." />
+      </div>
+      <br>
       <ul class="right">
         <li>
           <% if (user) { %>
@@ -20,9 +15,8 @@
             ><i class="material-icons left">trending_flat</i>Log Out</a
           >
           <% } else { %>
-          <a href="/auth/google"
-            ><i class="material-icons left"></i>Login with Google</a
-          >
+            <a href="/auth/google" class="btn btn-warning">login with Google</a>
+         
           <% } %>
         </li>
       </ul>
@@ -37,3 +31,4 @@
   <a href="/orders/view">View Entire Order List</a>
 </div>
 <% } %>
+

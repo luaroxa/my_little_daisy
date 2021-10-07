@@ -9,11 +9,11 @@ router.get("/", ordersCtrl.index);
 router.get("/test", ordersCtrl.test);
 
 //to view all the orders for ADMIN
-router.get("/view", ordersCtrl.viewAllOrder);
+router.get("orders/view", ordersCtrl.viewAllOrder);
 
 //to see order form for a customer
-router.get("/customer", ordersCtrl.viewForm);
+router.get("orders/customer", ordersCtrl.viewForm);
 // to submit the form
-router.post("/customer", ordersCtrl.create);
+router.post("orders/customer", ordersCtrl.create);
 
 module.exports = router;
