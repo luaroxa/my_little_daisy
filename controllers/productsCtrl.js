@@ -38,7 +38,7 @@ async function create(req, res) {
 async function menu(req, res) {
   const caneles  = await Product.find({ productType: 'Canele' });
   const cookies  = await Product.find({ productType: 'Ugly Cookie' });
-  // console.log('canele', canele)
+  console.log('canele', caneles)
   console.log('cookies', cookies)
     res.render("menues/menu.ejs", { caneles, cookies });
   };
