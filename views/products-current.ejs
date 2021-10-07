@@ -13,6 +13,7 @@
       <th>Product Type</th>
       <th>Product Flavour</th>
       <th>Price</th>
+      <th>Remove</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,11 @@
       <td><%= product.productType %></td>
       <td><%= product.productFlavor %></td>
       <td><%= product.price %></td>
+      <td>
+          <form action="/products-current/<%=product.id %>?_method=DELETE" method="POST" class="secondary-content">
+            <button type="submit" class="btn-small red-text">X</button>
+          </form>
+      </td>
     </tr>
     <% }); %>
   </tbody>

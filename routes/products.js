@@ -7,6 +7,8 @@ const passport = require("passport");
 router.get("/menu", productsCtrl.menu);
 router.get("/products-current", productsCtrl.display);
 router.post("/products-current", productsCtrl.create);
+
+router.delete("/products-current/:id", productsCtrl.delProduct);
 module.exports = router;
 
 // post method to create data.

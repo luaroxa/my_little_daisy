@@ -5,6 +5,7 @@ module.exports = {
   menu,
   display,
   create,
+  delProduct,
 };
 
 // async function testP(req,res){
@@ -25,12 +26,6 @@ async function create(req, res) {
   res.redirect("/products-current");
 }
 
-// async function menu(req, res) {
-//   await Product.find({}, function (err, product) {
-//     res.render("menues/menu.ejs", { product });
-//   });
-// }
-
 // const query  = Kitten.where({ color: 'white' });
 // query.findOne(function (err, kitten) {
 //   if (err) return handleError(err);
@@ -39,14 +34,15 @@ async function create(req, res) {
 //   }
 // });
 
-
+//failed 50%
 async function menu(req, res) {
-  const canele  = Product.find({ productType: 'Canele' });
+  const canele  = await Product.find({ productType: 'Canele' });
   console.log('canele', canele)
     res.render("menues/menu.ejs", { canele });
   };
 
 
+// showing full list of products
 async function display(req, res) {
   await Product.find({}, function (err, product) {
     res.render("products-current.ejs", { product });
@@ -54,3 +50,21 @@ async function display(req, res) {
 }
 
 //I want delete button
+function delProduct(req, res, next) {
+  Product.findOne({'_id': req.params.id}, function(err, product) {
+    product.remove();
+    product.save(function(err) {
+      res.redirect("/products-current");
+    });
+  });
+}
+
+// function delProduct(req, res, next) {
+//   Product.findOne({'id': req.params.id}, function(err, product) {
+//     product.id(req.params.id).remove();
+//     product.save(function(err) {
+//       res.redirect("products-current.ejs");
+//     });
+//   });
+// }
+

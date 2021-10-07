@@ -13,15 +13,6 @@ async function test(req, res) {
   res.send("thanks");
 }
 
-// where I will display log-in
-//dpend on the admin, you get directed to 2 diff page.
-// I don't think I no longer need this
-// function index(req, res) {
-//   Order.find({}, function (err, order) {
-//     res.render("orders/order-index.ejs");
-//   });
-// }
-
 async function viewForm(req, res) {
   await Order.find({}, function (err, orders) {
     res.render("orders/order-customer-form.ejs", { orders });

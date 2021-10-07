@@ -22,11 +22,3 @@ function index(req, res, next) {
 //   });
 // }
 
-// function delFact(req, res, next) {
-//   Student.findOne({'facts._id': req.params.id}, function(err, student) {
-//     student.facts.id(req.params.id).remove();
-//     student.save(function(err) {
-//       res.redirect('/students');
-//     });
-//   });
-// }
