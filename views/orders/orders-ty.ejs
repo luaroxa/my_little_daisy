@@ -5,4 +5,9 @@
     <a href="/orders" class="btn btn-warning"> forgot something?</a>
     </div>
 
+    <div>
+        <% if (customer)  %>
+            <a href="/logout" class="btn btn-warning">log out</a>
+    </div>
+      
 <%- include('../partials/footer') %>

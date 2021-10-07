@@ -10,13 +10,15 @@
       <br>
       <ul class="right">
         <li>
-          <% if (user) { %>
-          <a href="/logout"
-            ><i class="material-icons left">trending_flat</i>Log Out</a
-          >
+          <% if (customer) { %>
+            <a href="/logout" class="btn btn-warning">log out</a>
+            <% } if (customer && customer.id === '615f1f1a17bc87ae562c659a') { %>
+              <div class="card-action">
+                <a href="/orders/view">View Entire Order List</a>
+              </div>
+            
           <% } else { %>
             <a href="/auth/google" class="btn btn-warning">login with Google</a>
-         
           <% } %>
         </li>
       </ul>
@@ -26,9 +28,9 @@
 
 <!-- Add Dynamic UI form below this line -->
 <!-- // this is to show a link that will re-direct admin to a page. but link only show up for them -->
-<% if (user && customer.id == 'admin') { %>
-<div class="card-action">
-  <a href="/orders/view">View Entire Order List</a>
-</div>
-<% } %>
 
+<% if (customer && customer.id === '615f1f1a17bc87ae562c659a') { %>
+  <div class="card-action">
+    <a href="/orders/view">View Entire Order List</a>
+  </div>
+  <% } %>

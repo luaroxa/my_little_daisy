@@ -1,4 +1,6 @@
 var Order = require("../models/order.js");
+const Customer = require("../models/customer.js");
+
 
 module.exports = {
   // index,
@@ -32,7 +34,7 @@ async function create(req, res) {
   });
   console.log("userinput", userInput);
   console.log("customerOrder", customerOrder);
-  res.render("orders/orders-ty.ejs");
+  res.render("orders/orders-ty.ejs", {customer: req.user});
 }
 
 // displaying all of customer orders
