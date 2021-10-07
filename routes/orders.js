@@ -9,7 +9,10 @@ const passport = require("passport");
 router.get("/test", ordersCtrl.test);
 
 //to view all the orders for ADMIN
+//doo something like below!?
+// router.post('/facts', isLoggedIn, studentsCtrl.addFact);
 router.get("/orders/view", ordersCtrl.viewAllOrder);
+
 
 //to see order form for a customer
 router.get("/orders/customer", ordersCtrl.viewForm);

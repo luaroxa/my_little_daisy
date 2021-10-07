@@ -22,7 +22,7 @@ async function create(req, res) {
   // console.log('newProduct', req.body); to check
   // console.log('input', input); to check
   console.log("product", newProduct);
-  res.redirect("/products/products-current");
+  res.redirect("/products-current");
 }
 
 // async function menu(req, res) {
@@ -45,8 +45,6 @@ async function menu(req, res) {
   console.log('canele', canele)
     res.render("menues/menu.ejs", { canele });
   };
-
-
 
 
 async function display(req, res) {

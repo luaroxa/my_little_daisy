@@ -46,7 +46,7 @@ async function create(req, res) {
 
 // displaying all of customer orders
 async function viewAllOrder(req, res) {
-  await Order.find({}, function (err, orders) {
+  // await Order.find({}, function (err, orders) {
     res.render("orders/order-admin-orderList.ejs", { orders });
-  });
+  // });
 }
