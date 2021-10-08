@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 orderSchema = new Schema(
   {
-    customer: [{ type: Schema.Types.ObjectId, ref: "Customers" }],
+    customer: [{ type: Schema.Types.ObjectId, ref: "Customer" }],
     pickupLocation: {
       type: String,
       enum: ["Downtown SW", "Dalhousie NW"],
     },
-    productChoice: [{ type: Schema.Types.ObjectId, ref: "Products" }],
+    productChoice: [{ type: Schema.Types.ObjectId, ref: "Product" }],
     quantity: {
       type: Number,
     },

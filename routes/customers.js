@@ -5,10 +5,7 @@ const passport = require("passport");
 
 router.get("/admin", customersCtrl.index);
 router.get("/orders", customersCtrl.orderLogin);
-//marc's code
-// router.get("/google", customersCtrl.index);
 
-//marc's code
 router.get(
   "/auth/google",
   passport.authenticate("google", {

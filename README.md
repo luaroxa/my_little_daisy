@@ -18,7 +18,7 @@ Their 'Ugly Cookies' are their most famous item.
 9. an ERD creator
 
 # Getting Started:
-Link to App:
+Link to App: https://janino2.herokuapp.com/home
 Link to Trello Board: https://trello.com/b/yc41CjVp/project-2
 
 # ICE box:
