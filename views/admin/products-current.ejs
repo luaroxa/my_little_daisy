@@ -33,16 +33,20 @@
   </tbody>
 </table>
 
-<h1>New product? Add below</h1>
+<br><br>
+<h1>New product? </h1>
+<h3>Add below!</h3>
+<br><br>
 
+<div class="productForm">
 <form
   method="POST"
   action="/products-current"
   class="form-horizontal"
   id="new_product"
 >
-  <div class="form-group text-center col-sm-5 customerForm">
-    <label for="productName" class="col-sm-5 form-label">
+  <div class="form-group ">
+    <label for="productName" class="form-label">
       Product Name
     </label>
       <input
@@ -53,20 +57,21 @@
         placeholder="product-flavour"
       />
   </div>
-
-  <div class="form-group text-center col-sm-5">
-    <label for="productType" class="col-sm-5 form-label">
+  <br>
+  <div class="form-group">
+    <div>
+    <label for="productType" class="form-label">
       Product Type
-    </label>
-      <select class="col-sm-5" id="productType" name="productType">
+    </label> </div>
+      <select class="" id="productType" name="productType">
         <option value="Cheese Cake">Cheese Cake</option>
         <option value="Ugly Cookie">Ugly Cookie</option>
         <option value="Canele">Canele</option>
       </select>
   </div>
-
-  <div class="form-group text-center col-sm-5">
-    <label for="productFlavor" class="col-sm-5 form-label">
+  <br>
+  <div class="form-group ">
+    <label for="productFlavor" class=" form-label">
       Product Flavor</label>
       <input
         id="productFlavor"
@@ -75,17 +80,21 @@
         class="form-control"
       />
   </div>
-
-  <div class="form-group text-center col-sm-5">
-    <label for="price" class="col-sm-5 form-label"> Price </label>
+  <br>
+  <div class="form-group">
+    <label for="price" class="form-label"> Price </label>
       <input id="price" name="price" type="number" class="form-control" />
     </div>
 <div>
+  <br>
   <button type="submit" class="btn btn-warning">Submit</button>
+  <br>
 </div>
  <br><br>
 </form>
 <div class="adminBtn">
   <a href="/admin" class="btn btn-primary"> Back to Admin Page </a>
   </div>
+</div>
+
 <%- include('../partials/footer') %>

@@ -52,3 +52,47 @@ from old menu displaying tables.
     <input id="productpicked" name="productpicked" type="string" class="form-control" />
   </div>
 </div>
+
+
+
+
+
+<div class="form-group">
+
+  <div class="col-sm-5">
+    <label for="pickupLocation" class="col-sm-5 control-label">
+      Pickup Location</label> </div>
+
+    <div class="col-sm-5">
+      <select id="pickupLocation" name="pickupLocation">
+        <option value="Downtown SW">Downtown SW</option>
+        <option value="Dalhousie NW">Dalhousie NW</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-5">
+      <label for="productChoice"> Product of Choice </label>
+     </div>
+    <div class="col-sm-5">
+    <select name="productChoice">
+    <% products.forEach(function(p) { %>
+        <option value="<%= p.id %>"><%= p.productName %></option>
+    <% }) %>
+    </select>
+  </div>
+</div>s
+
+<div class="form-group">
+  <div class="col-sm-5">
+  <label for="quantity" class="col-sm-5 control-label"> Quantity</label></div>
+  <div class="col-sm-5">
+    <input id="quantity" name="quantity" type="number" class="form-control" />
+  </div>
+</div>
+
+<button type="submit" class="btn btn-warning">Submit</button>
+</form>
+</div>

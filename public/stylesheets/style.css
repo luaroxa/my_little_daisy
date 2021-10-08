@@ -88,9 +88,26 @@ why can't I margin container Mune??*/
  margin-left: 90px;
 }
 
-
 .adminPic{
 align-items: center;
 margin: auto;
 margin-bottom: 50px;
+}
+
+/* [3] order form for customer */
+
+.formPage{
+  width: 45%;
+  margin: 0 auto;
+}
+#orderForm{
+  width: 250x;
+margin: 0 auto;
+display: flex;
+/* flex-direction: row; */
+}
+
+.productForm{
+  width: 50%;
+  margin: 0 auto;
 }
