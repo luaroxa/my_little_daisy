@@ -48,9 +48,10 @@ async function create(req, res) {
 async function menu(req, res) {
   const caneles  = await Product.find({ productType: 'Canele' });
   const cookies  = await Product.find({ productType: 'Ugly Cookie' });
+  const cheeseCake  = await Product.find({ productType: 'Cheese Cake' });
   console.log('canele', caneles)
   console.log('cookies', cookies)
-    res.render("menues/menu.ejs", { caneles, cookies });
+    res.render("menues/menu.ejs", { caneles, cookies, cheeseCake });
   };
 
 
