@@ -22,18 +22,21 @@ async function viewForm(req, res) {
 }
 
 async function create(req, res) {
-  // let userInput = req.body;
+  let userInput = req.body;
+  // let incomingCustomer = req.user;
   //using mongoose fn create
   let customerOrder = await Order.create({
-    customer: req.user,
+    // customer: incomingCustomer.name,
     pickupLocation: req.body.pickupLocation,
-    product: req.body.product,
+    // product: req.body.product,
     quantity: req.body.quantity,
-    price: req.body.price,
+
   });
+  console.log("SUPPP");
   console.log("userinput", userInput);
+  // console.log("incomingcus", incomingCustomer);
   console.log("customerOrder", customerOrder);
-  res.render("orders/orders-ty.ejs", {customer: req.user, customerOrder});
+  res.render("orders/orders-ty.ejs", { customerOrder, customer: req.user});
 }
 
 // displaying all of customer orders
