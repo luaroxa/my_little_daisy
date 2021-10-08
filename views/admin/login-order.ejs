@@ -1,4 +1,4 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
     <div class="nav-wrapper">
 
       <br>
@@ -12,12 +12,7 @@
         <li>
           <% if (customer) { %>
             <a href="/logout" class="btn btn-warning">log out</a>
-            <% } if (customer && customer.id === '615f1f1a17bc87ae562c659a') { %>
-              <div class="card-action">
-                <a href="/orders/view">View Entire Order List</a>
-              </div>
-            
-          <% } else { %>
+            <% } else { %>
             <a href="/auth/google" class="btn btn-warning">login with Google</a>
           <% } %>
         </li>

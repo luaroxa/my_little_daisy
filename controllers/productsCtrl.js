@@ -1,7 +1,6 @@
 var Product = require("../models/product.js");
 
 module.exports = {
-  // testP,
   menu,
   display,
   create,
@@ -12,6 +11,24 @@ module.exports = {
 //    await Product.create({product_name: 'Jane'})
 // res.send ('coolio')
 // }
+
+// this will put a performerid like "123" to the cast: []
+// function addToproductChoice(req,res) {
+//   console.log("our form data is:", req.body)
+//    const orderId = req.params.id; 
+//    Order.findById(orderId, function(err, order) {
+
+//     // if(err) {console.log(err)}
+
+//      order.productChoice.push(req.body.productChoiceId)
+//      order.save(function(err) {
+//       console.log("the final movie is", order)
+//       res.redirect('/orders/customer');
+//      })
+//    })
+// }
+
+
 async function create(req, res) {
   // let input = req.body; to check
   let newProduct = await Product.create({
@@ -26,13 +43,6 @@ async function create(req, res) {
   res.redirect("/products-current");
 }
 
-// const query  = Kitten.where({ color: 'white' });
-// query.findOne(function (err, kitten) {
-//   if (err) return handleError(err);
-//   if (kitten) {
-//     // doc may be null if no document matched
-//   }
-// });
 
 //failed 50%
 async function menu(req, res) {
@@ -51,7 +61,7 @@ async function menu(req, res) {
 // showing full list of products
 async function display(req, res) {
   await Product.find({}, function (err, product) {
-    res.render("products-current.ejs", { product });
+    res.render("admin/products-current.ejs", { product });
   });
 }
 

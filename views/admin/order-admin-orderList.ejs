@@ -1,7 +1,11 @@
 <%- include('../partials/header') %>
 <h2>Welcome back Admin! <br> Here's a list of all of the orders.</h2>
-<br><br>
+<br>
 
+<div class="adminBtn">
+  <a href="/admin" class="btn btn-primary"> Back to Admin Page </a>
+  </div>
+  <br> <br> <br>
 <h1>Current Orders</h1>
 <% if (orders.length) { %>
 <table class="table table-striped" id="orderList">
@@ -32,4 +36,7 @@
 </table>
 <% } else { %>
 <h5>No Customer ordered Yet</h5>
+
+
+
 <% } %> <%- include('../partials/footer') %>

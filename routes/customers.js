@@ -3,7 +3,8 @@ var router = express.Router();
 const customersCtrl = require("../controllers/customersCtrl.js");
 const passport = require("passport");
 
-router.get("/orders", customersCtrl.index);
+router.get("/admin", customersCtrl.index);
+router.get("/orders", customersCtrl.orderLogin);
 //marc's code
 // router.get("/google", customersCtrl.index);
 

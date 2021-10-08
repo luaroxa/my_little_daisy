@@ -3,14 +3,7 @@ var router = express.Router();
 const ordersCtrl = require("../controllers/ordersCtrl.js");
 const passport = require("passport");
 
-/* GET home page. */
-// don't call it /index.
-// router.get("/", ordersCtrl.index);
-router.get("/test", ordersCtrl.test);
 
-//to view all the orders for ADMIN
-//doo something like below!?
-// router.post('/facts', isLoggedIn, studentsCtrl.addFact);
 router.get("/orders/view", ordersCtrl.viewAllOrder);
 
 

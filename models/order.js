@@ -8,14 +8,8 @@ orderSchema = new Schema(
       type: String,
       enum: ["Downtown SW", "Dalhousie NW"],
     },
-    product: [{ type: Schema.Types.ObjectId, ref: "Products" }],
-    // product: {
-    //   type: String,
-    // },
+    productChoice: [{ type: Schema.Types.ObjectId, ref: "Products" }],
     quantity: {
-      type: Number,
-    },
-    price: {
       type: Number,
     },
   },
