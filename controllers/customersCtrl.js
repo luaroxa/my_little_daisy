@@ -9,7 +9,7 @@ module.exports = {
 };
 
 function index(req, res) {
-  res.render("orders/order-index.ejs");
+  res.render("admin/order-index.ejs");
 }
 
 function orderLogin(req, res) {

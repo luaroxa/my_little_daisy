@@ -4,21 +4,17 @@
   text-align: center;
 
 }
-
-.btn-warning {
-  background-color: #fce495 !important;
-  /* background-color: #d0bbe9 !important; */
-}
-nav {
-  width: 1350px;
-  height: 200px;
-  background-color: rgb(242, 194, 194);
-}
-
 body{
   background-color: rgb(242, 194, 194);
   width: 1350px;
   margin: 0 auto;
+}
+
+/* nav */
+nav {
+  width: 1350px;
+  height: 200px;
+  background-color: rgb(242, 194, 194);
 }
 .navbar-nav {
   width:100%
@@ -29,27 +25,42 @@ body{
   font-size: 20px;
   margin: auto;
 }
+/* Buttons */
+.btn-warning {
+  background-color: #fce495 !important;
+  /* background-color: #d0bbe9 !important; */
+}
 
+.orderBtn{
+  text-align: center;
+  margin: 50px 0px auto;
+}
+
+
+/* [1] Index: home page */
 .imgMain {
   background-color: rgb(242, 194, 194);
   margin: 0 auto; 
 }
-
+#welcome {
+  margin-top: 40px;
+}
 #k {
   background-color: black;
-  width: 500px;
+  width: 600px;
   height: 400px;
-  margin: 10px 400px;
+  margin-top: 10px;
 }
 .imgGrid {
   background-color: rgb(242, 194, 194);
-  margin: 50px 300px 0px 300px;
-  width: 800px;
+  margin: 50px 300px 0px 270px;
+  width: 80%
+
   /* background-color: lightgreen; */
 }
 
 .row1, .row2, .row3 {
-  width: 100%;
+  width: 800px;
   display: flex;
 flex-direction: row;
 margin: 10px 10px auto;
@@ -60,10 +71,6 @@ margin: 10px 10px auto;
 }
 .middle {
   margin: 0 10px 0 10px;
-}
-.orderBtn{
-  text-align: center;
-  margin: 50px 0px auto;
 }
 
 /* PAGE 2: Menu.ejs 
@@ -79,4 +86,11 @@ why can't I margin container Mune??*/
 .card {
  width: 70%;
  margin-left: 90px;
+}
+
+
+.adminPic{
+align-items: center;
+margin: auto;
+margin-bottom: 50px;
 }
