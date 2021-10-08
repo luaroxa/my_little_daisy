@@ -5,6 +5,15 @@ Their 'Ugly Cookies' are their most famous item.
 
 # Visuals of the app
 
+![image](https://user-images.githubusercontent.com/71451754/136571353-47634813-b340-4f5b-8dcf-3c9c55d8affc.png)
+![image](https://user-images.githubusercontent.com/71451754/136571459-d649166c-09ca-48d4-8e56-3827f7902b3e.png)
+![image](https://user-images.githubusercontent.com/71451754/136571509-e7cee893-606d-4bde-8b92-a5c8d147c965.png)
+![image](https://user-images.githubusercontent.com/71451754/136571538-66b67005-c6b2-4603-8b7a-387a45484a42.png)
+![image](https://user-images.githubusercontent.com/71451754/136571618-ef3a567e-18b1-4d6f-814c-ba773f496b44.png)
+![image](https://user-images.githubusercontent.com/71451754/136571691-c5cc42f9-8aac-46a1-b188-d6353cd7a75d.png)
+
+
+
 
 # Technologies Used:
 1. node.js
@@ -15,7 +24,8 @@ Their 'Ugly Cookies' are their most famous item.
 6. Atlas
 7. Heroku
 8. Figma 
-9. an ERD creator
+9. Gooele Oauth
+10. an ERD creator
 
 # Getting Started:
 Link to App: https://janino2.herokuapp.com/home
