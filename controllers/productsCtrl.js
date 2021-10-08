@@ -7,38 +7,13 @@ module.exports = {
   delProduct,
 };
 
-// async function testP(req,res){
-//    await Product.create({product_name: 'Jane'})
-// res.send ('coolio')
-// }
-
-// this will put a performerid like "123" to the cast: []
-// function addToproductChoice(req,res) {
-//   console.log("our form data is:", req.body)
-//    const orderId = req.params.id; 
-//    Order.findById(orderId, function(err, order) {
-
-//     // if(err) {console.log(err)}
-
-//      order.productChoice.push(req.body.productChoiceId)
-//      order.save(function(err) {
-//       console.log("the final movie is", order)
-//       res.redirect('/orders/customer');
-//      })
-//    })
-// }
-
-
 async function create(req, res) {
-  // let input = req.body; to check
   let newProduct = await Product.create({
     productName: req.body.productName,
     productType: req.body.productType,
     productFlavor: req.body.productFlavor,
     price: req.body.price,
   });
-  // console.log('newProduct', req.body); to check
-  // console.log('input', input); to check
   console.log("product", newProduct);
   res.redirect("/products-current");
 }
@@ -76,12 +51,4 @@ function delProduct(req, res, next) {
   });
 }
 
-// function delProduct(req, res, next) {
-//   Product.findOne({'id': req.params.id}, function(err, product) {
-//     product.id(req.params.id).remove();
-//     product.save(function(err) {
-//       res.redirect("products-current.ejs");
-//     });
-//   });
-// }
 
