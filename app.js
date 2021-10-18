@@ -34,7 +34,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
-app.use("/home", indexRouter);
+app.use("/", indexRouter);
 app.use("/", require("./routes/orders.js"));
 app.use("/", require("./routes/products.js"));
 app.use("/", require("./routes/customers.js"));
