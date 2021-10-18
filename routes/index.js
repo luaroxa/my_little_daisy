@@ -5,7 +5,7 @@ const passport = require("passport");
 /* GET home page. */
 router.get("/", function (req, res, next) {
   console.log('we are live')
-  res.redirect("/home");
+  res.render("index.ejs");
 });
 
 
