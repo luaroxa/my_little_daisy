@@ -6,15 +6,15 @@ const { findById } = require("../models/order.js");
 
 module.exports = {
   create,
-  test,
+  // test,
   viewAllOrder,
   viewForm,
 };
 
-async function test(req, res) {
-  await Order.create({ customer_name: "Jane" });
-  res.send("thanks");
-}
+// async function test(req, res) {
+//   await Order.create({ customer_name: "Jane" });
+//   res.send("thanks");
+// }
 
 async function viewForm(req,res) {
   try {  
@@ -57,7 +57,7 @@ async function viewAllOrder(req, res) {
 }
 
 
-function viewAllOrder(req, res) {
-  Order.find({}).populate('Product').exec(function(err, orders){
-      res.render("admin/order-admin-orderList.ejs", {  orders })});
-  }
+// function viewAllOrder(req, res) {
+//   Order.find({}).populate('Product').exec(function(err, orders){
+//       res.render("admin/order-admin-orderList.ejs", {  orders })});
+//   }

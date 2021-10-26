@@ -8,5 +8,10 @@ router.get("/", function (req, res, next) {
   res.render("index.ejs");
 });
 
+router.get("/home", function (req, res, next) {
+  console.log('we are live')
+  res.render("index.ejs");
+});
+
 
 module.exports = router;

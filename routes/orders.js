@@ -3,7 +3,6 @@ var router = express.Router();
 const ordersCtrl = require("../controllers/ordersCtrl.js");
 const passport = require("passport");
 
-
 router.get("/orders/view", ordersCtrl.viewAllOrder);
 
 

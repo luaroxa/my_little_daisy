@@ -31,8 +31,6 @@ async function menu(req, res) {
 
 
 
-
-
 // [For PRODUCT LIST]
 // showing full list of products
 async function display(req, res) {
