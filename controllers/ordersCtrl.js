@@ -43,10 +43,21 @@ async function create(req, res) {
 
 
 // displaying all of customer orders
+// async function viewAllOrder(req, res) {
+//   // let products = await Product.find()
+//   await Order.find({}, function (err, orders) {
+//     res.render("admin/order-admin-orderList.ejs", {  orders });
+//   });
+// }
+
+// proper way: 
 async function viewAllOrder(req, res) {
-  // let products = await Product.find()
-  await Order.find({}, function (err, orders) {
+  let orders = await Order.find({}).populate('Product')
     res.render("admin/order-admin-orderList.ejs", {  orders });
-  });
 }
 
+
+function viewAllOrder(req, res) {
+  Order.find({}).populate('Product').exec(function(err, orders){
+      res.render("admin/order-admin-orderList.ejs", {  orders })});
+  }

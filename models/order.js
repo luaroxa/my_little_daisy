@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 orderSchema = new Schema(
   {
-    customer: [{ type: Schema.Types.ObjectId, ref: "Customer" }],
+    customer: { type: Schema.Types.ObjectId, ref: "Customer" },
     pickupLocation: {
       type: String,
       enum: ["Downtown SW", "Dalhousie NW"],
